@@ -15,6 +15,7 @@ a {text-decoration: none;}
 .container {
     width: 1200px;
     margin: auto;
+    position: relative;
 }
 header {
     width: 100%;
@@ -31,10 +32,14 @@ header {
 }
 #contents {
     height: 200px;
+    display: flex;
 }
 footer {
     width: 100%;
     height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: var(--sub-color);
 }
 
 header .logo img {
@@ -80,12 +85,98 @@ header nav {
 }
 .tab-menu {
     display: flex;
+    text-align: center;
     width: 200px;
-    height: 50px;
-    gap: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+.menu-item { width: 100%;}
+.active, .menu-item:hover { background-color: var(--main-color);}
+.menu-item a:hover {color: var(--back-color);}
+.contents {
+    width: 100%;
+    height: 160px;
+    background-color: var(--main-color);
+}
+#content-notice a {
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+#content-notice a:hover {
+    background-color: #fff;
+    color: var(--text-color);
+}
+#content-gallery {
+    display: none;
+}
+.gallery {
+    position: relative;
+}
+.gallery-item {
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-evenly;
+}
+.banner {
+    width: 400px;
+    height: 100%;
+}
+.goto {
+    width: 400px;
+    height: 100%;
 }
 
-.menu-item {
-    
+.flogo a {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    padding: 0 20px;
+    filter: grayscale(100%);
 }
-#content-gallery {display: none;}
+.fcontent {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+.fmenu {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.fmenu a:hover {
+    color: var(--main-color);
+}
+
+.popup {
+    width: 500px;
+    height: 400px;
+    background-color: var(--sub-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.popup-container {
+    text-align: center;
+}
+.popup h1 {
+    margin: 20px;
+}
+.popup p {
+    line-height: 80px;
+}
+button {
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+}
+.button {
+    padding-top: 10px;
+    padding-right: 20px;
+    text-align: right;
+}
