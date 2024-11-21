@@ -10,7 +10,7 @@ a { text-decoration: none; }
   --text-color    : #333;
 }
 
-.container { width: 1200px; margin: auto;}
+.container { width: 1200px; margin: auto; position: relative;}
 header {
   width: 100%;
   height: 100px;
@@ -48,13 +48,13 @@ footer .logo {
 
 nav {
   position: relative;
-  height: 50px;
   z-index: 10;
 }
 .main-menu {
   display: flex;
 }
 .main-menu li {
+  height: 50px;
   background-color: var(--back-color);
   width: 150px;
   text-align: center;
@@ -74,10 +74,12 @@ nav {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 .slide {
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
 .tab {
@@ -90,9 +92,98 @@ nav {
 }
 .tab-menu {
   width: 200px;
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
 }
+.menu-item {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+.menu-item:hover {
+  background-color: var(--main-color);
+}
+.menu-item a:hover {
+  color: var(--back-color);
+}
+.active {
+  background-color: var(--main-color);
+}
+.content {
+  width: 100%;
+  height: 160px;
+  background-color: var(--sub-color);
+}
+.content-item ul li a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 40px;
+  padding: 0 20px;
+}
+.content-item ul li a:hover {
+  background-color: var(--back-color);
+  color: #333;
+}
+#content-gallery {
+  display: none;
+}
+.gallery {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+.banner {
+  width: 400px;
+  height: 100%;
+}
+.goto {
+  width: 400px;
+  height: 100%;
+}
+
+.fcontent {
+  width: 100%;
+  line-height: 35px;
+  text-align: center;
+}
+.fmenu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.fmenu a:hover {
+  color: var(--back-color);
+}
+
+.popup {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  background-color: var(--back-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  border: 1px solid #000;
+  display: none;
+}
+.popup-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.popup-container h1 {
+  margin: 20px 0;
+}
+.popup-container p {
+  line-height: 30px;
+}
+.button {
+    text-align: right;
+    padding: 0px 20px;
+    
+}
+
