@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
-a {text-decoration: none;}
+a {text-decoration: none; color: var(--text-color);}
 
 :root {
     --main-color    : royalblue;
@@ -27,7 +27,7 @@ header .logo img {
     height: auto;
     object-fit: contain;
 }
-nav {
+header nav {
     position: relative;
     padding-left: 25px;
     padding-top: 20px;
@@ -40,6 +40,7 @@ nav {
     background-color: var(--sub-color);
     border: 1px solid #000;
 }
+
 .sub-menu li{
     position: absolute;
     display: none;
@@ -76,6 +77,33 @@ nav {
     margin: 0 10px;
     height: 40px;
     line-height: 40px;
+}
+.tab a:hover {
+    color: red;
+}
+.ntab {
+    background-color: var(--sub-color);
+}
+.gtab {
+    background-color: lightgray;
+}
+.notice-content {
+    height: 160px;
+    background-color: var(--sub-color);
+}
+.notive-content nav {
+    position: relative;
+}
+.notice-content li {
+}
+.notice-content li a {
+    justify-content: space-evenly;
+    line-height: 40px;
+    display: flex;  
+}
+.notice-content li a:hover {
+    background-color: var(--back-color);
+    color: red;
 }
 .popup {
     display: none;
