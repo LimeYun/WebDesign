@@ -15,6 +15,7 @@ a {text-decoration: none; color: var(--text-color);}
     width: 1000px;
     height: 650px;
     margin: 0;
+    position: relative;
 }
 header {
     width: 250px;
@@ -31,6 +32,7 @@ header nav {
     position: relative;
     padding-left: 25px;
     padding-top: 20px;
+    z-index: 10;
 
 }
 .main-menu li {
@@ -43,7 +45,7 @@ header nav {
 
 .sub-menu li{
     position: absolute;
-    display: none;
+    /* display: none; */
     margin-left: 200px;
 }
 
@@ -53,13 +55,18 @@ header nav {
     overflow: hidden;
 }
 .slide-container {
+    /* width: 750px;
+    height: 350px; */
+    display: flex;
     position: relative;
 }
 .slide {
-    position: absolute;
+    /* position: absolute; */
+    width: 750px;
+    height: 350px;
 }
 .slide img {
-    /* width: 100%; */
+    width: 750px;
     height: 350px;
 }
 #contents {
@@ -105,6 +112,105 @@ header nav {
     background-color: var(--back-color);
     color: red;
 }
+.gallery {
+    width: 250px;
+    height: 100%;
+}
+.gallery-inner {
+    width: 100%;
+    height: 100%;
+}
+.gallery-content {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background-color: aqua;
+}
+.gcon {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 45px;
+}
+.gallery-content img {
+    width: 70px;
+    height: 70px;
+}
+.gcon a:hover {
+    opacity: 80%;
+}
+
+.banner {
+    width: 250px;
+    height: 100%;
+    position: relative;
+}
+.banner-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: aquamarine;
+}
+.banner h2 {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10%;
+}
+.banner h2:hover {
+    color: red;
+}
+footer {
+    width: 750px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+}
+footer .logo img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+.fcontent {
+    width: 550px;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+}
+.fmenu {
+    display: flex;
+    justify-content: space-evenly;
+}
+.fmenu a:hover {
+    color: red;
+}
 .popup {
     display: none;
+    width: 400px;
+    height: 300px;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5%;
+}
+.popup-container {
+    width: 100%;
+    height: 100%;
+    margin: 20px 20px;
+}
+.popup h1 {
+    margin-bottom: 10px;
+}
+.popup p {
+    line-height: 30px;
+}
+.button {
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 40px;
 }
